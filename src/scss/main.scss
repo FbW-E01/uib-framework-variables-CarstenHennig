@@ -1,2 +1,99 @@
-// This is where you can import other stylesheets or write your scss code
-@import "../../node_modules/bootstrap/scss/bootstrap";
+// This is where you can import other stylesheets or write your scss cod
+// @import "../../node_modules/bootstrap/scss/bootstrap"; 
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav {
+    ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    li {
+        list-style: none;
+        padding: 20px;
+    }
+}
+
+header {
+    height: 30vh;
+    width: 100%;
+    background-image: url(../images/header.jpg);
+    h1 {
+        text-align: center;
+    }
+}
+
+.wrapper {
+    width:100% ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas:
+     "card1 card1 card2 card2"
+     ". card3 card3 ."
+     ;
+    grid-template-rows: auto;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.card:nth-child(1){
+
+    grid-area: card1;
+}
+
+.card:nth-child(2){
+
+    grid-area: card2;
+}
+.card:nth-child(3){
+
+    grid-area: card3;
+}
+
+.card {
+    display: flex;
+    padding: 20px;
+    
+    background-color: greenyellow;
+    img {
+        width: 200px;
+        margin: 0;
+        padding: 10px;
+    }
+   
+}
+
+
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.article:nth-child(odd) {
+    border: 1px solid greenyellow;
+}
+
+.article {
+    padding: 20px;
+}
+
+footer {
+    background-color: blue;
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        list-style: none;
+        padding: 20px;
+    }
+}
